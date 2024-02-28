@@ -1,0 +1,4573 @@
+{
+  "x-generator": "NSwag v14.0.3.0 (NJsonSchema v11.0.0.0 (Newtonsoft.Json v13.0.0.0))",
+  "openapi": "3.0.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5274"
+    }
+  ],
+  "paths": {
+    "/api/Uploads/GetAttachments/{typeId}/{originId}": {
+      "get": {
+        "tags": [
+          "Uploads"
+        ],
+        "operationId": "Uploads_GetAttachments",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "originId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Uploads/FinalDecision": {
+      "post": {
+        "tags": [
+          "Uploads"
+        ],
+        "operationId": "Uploads_FinalDecision",
+        "parameters": [
+          {
+            "name": "form",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {}
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Uploads/CarAttachments": {
+      "post": {
+        "tags": [
+          "Uploads"
+        ],
+        "operationId": "Uploads_CarAttachments",
+        "parameters": [
+          {
+            "name": "form",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {}
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Uploads/ElectrFinalDecisionAction": {
+      "post": {
+        "tags": [
+          "Uploads"
+        ],
+        "operationId": "Uploads_ElectrFinalDecisionAction",
+        "parameters": [
+          {
+            "name": "form",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {}
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Uploads/GetElectrAttachments/{typeId}/{originId}": {
+      "get": {
+        "tags": [
+          "Uploads"
+        ],
+        "operationId": "Uploads_GetElectrAttachments",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "originId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/RequestCar": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_RequestCar",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarRequestDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarRequest"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/ResponseCar": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_ResponseCar",
+        "requestBody": {
+          "x-name": "response",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarManagerResponseDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarManagerResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarAssignment": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarAssignment",
+        "requestBody": {
+          "x-name": "assignment",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarAssignmentDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarAssignment"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CloseVoting": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CloseVoting",
+        "requestBody": {
+          "x-name": "closing",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarVoteClosing"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarVoteClosing"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarFinalDecision": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarFinalDecision",
+        "requestBody": {
+          "x-name": "decision",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarVotingFinalDecisionDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarVotingFinalDecision"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarVoting": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarVoting",
+        "requestBody": {
+          "x-name": "vote",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarVotingDetailDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarVotingDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/DeleteRequest/{id}": {
+      "delete": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_DeleteRequest",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarReturnApproval": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarReturnApproval",
+        "requestBody": {
+          "x-name": "approval",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarReturnRequestApprovalDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarReturnRequestApproval"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarUpdate": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarUpdate",
+        "requestBody": {
+          "x-name": "car",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Car"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarInsuranceUpdate": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarInsuranceUpdate",
+        "requestBody": {
+          "x-name": "insurance",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarInsuranceDetail"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarInsuranceDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/SendMailWithAttachment": {
+      "post": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_SendMailWithAttachment",
+        "parameters": [
+          {
+            "name": "form",
+            "in": "query",
+            "style": "form",
+            "explode": true,
+            "schema": {
+              "type": "array",
+              "items": {}
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "400": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarDeliveriesByBeneficiary/{beneficiaryId}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarDeliveriesByBeneficiary",
+        "parameters": [
+          {
+            "name": "beneficiaryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarDeliveryDetail"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarDeliveriesForCurrentUser": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarDeliveriesForCurrentUser",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarDeliveryDetail"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/SubordinateDetails": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_SubordinateDetails",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ArpUser"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarRequestDetailsByBeneficiary/{beneficiaryId}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarRequestDetailsByBeneficiary",
+        "parameters": [
+          {
+            "name": "beneficiaryId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarRequest"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetListItems/{typeId}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetListItems",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MyListItem"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarVotingPendingList": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarVotingPendingList",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarManagerResponse"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCars": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCars",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/CarVotingFinalDecision_List": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_CarVotingFinalDecision_List",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarVotingFinalDecision"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarsAndEmployees": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarsAndEmployees",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Car"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarReturnRequests": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarReturnRequests",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarRequest"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarReturnApprovals": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarReturnApprovals",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/CarReturnRequestApproval"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetManufacturerList": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetManufacturerList",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Manufacturer"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarVoteClosingById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarVoteClosingById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarVoteClosing"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarRequestById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarRequestById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarRequest"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarManagerResponseById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarManagerResponseById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarManagerResponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarAssignmentById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarAssignmentById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarAssignment"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarVotingDetailById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarVotingDetailById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarVotingDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Cars/GetCarRequest_ById/{id}": {
+      "get": {
+        "tags": [
+          "Cars"
+        ],
+        "operationId": "Cars_GetCarRequest_ById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarRequest"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetSubordinatesAndRequests/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetSubordinatesAndRequests",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ArpUser"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetRequestById/{id}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetRequestById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Request"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetModels/{manufacturerId}/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetModels",
+        "parameters": [
+          {
+            "name": "manufacturerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Model"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetItems/{manufacturerId}/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetItems",
+        "parameters": [
+          {
+            "name": "manufacturerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Item"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetListItems/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetListItems",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Item"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveItem": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveItem",
+        "requestBody": {
+          "x-name": "item",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemDto"
+              }
+            }
+          },
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Item"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveRequest": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveRequest",
+        "requestBody": {
+          "x-name": "request",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Request"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveAction": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveAction",
+        "requestBody": {
+          "x-name": "action",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RequestActionDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RequestAction"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveAssignment": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveAssignment",
+        "requestBody": {
+          "x-name": "assignment",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AssignmentDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Assignment"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveVoting": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveVoting",
+        "requestBody": {
+          "x-name": "data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VotingDetailDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/VotingDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetRequests/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetRequests",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Request"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetCurrentUserDeliveries": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetCurrentUserDeliveries",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/DeliveryDetail"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetCurrentUserRequests": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetCurrentUserRequests",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Request"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/DeleteRequest/{id}": {
+      "delete": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_DeleteRequest",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetModelsList": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetModelsList",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Model"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveModel": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveModel",
+        "requestBody": {
+          "x-name": "data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ModelDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Model"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetSubordinatesAndDeliveries/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetSubordinatesAndDeliveries",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ArpUser"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetRequestsAll/{typeId}": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetRequestsAll",
+        "parameters": [
+          {
+            "name": "typeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Request"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetReturnRequests": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetReturnRequests",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Request"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/SaveReturnRequestApproval": {
+      "post": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_SaveReturnRequestApproval",
+        "requestBody": {
+          "x-name": "data",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReturnRequestApprovalDto"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReturnRequestApproval"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Electronics/GetReturnRequestApprovals": {
+      "get": {
+        "tags": [
+          "Electronics"
+        ],
+        "operationId": "Electronics_GetReturnRequestApprovals",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ReturnRequestApproval"
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Users/Login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Login",
+        "requestBody": {
+          "x-name": "login",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginData"
+              }
+            }
+          },
+          "required": true,
+          "x-position": 1
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Users/Logout": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Logout",
+        "responses": {
+          "200": {
+            "description": "",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CarRequest": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestDetail": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "carTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "carManagerResponse": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarManagerResponse"
+              }
+            ]
+          },
+          "beneficiary": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "accept": {
+            "type": "boolean"
+          },
+          "carType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarType"
+              }
+            ]
+          },
+          "requestType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RequestType"
+              }
+            ]
+          },
+          "car": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Car"
+              }
+            ]
+          },
+          "progress": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Progress"
+            }
+          },
+          "previousCarDeliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarDeliveryDetail"
+            }
+          }
+        }
+      },
+      "CarManagerResponse": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "managerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "responseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "managerResponseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "carRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarRequest"
+              }
+            ]
+          },
+          "manager": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "votings": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarVotingDetail"
+            }
+          },
+          "currentUserVoting": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarVotingDetail"
+              }
+            ]
+          },
+          "totalVotesCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalVotesObtained": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carVotingFinalDecision": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarVotingFinalDecision"
+              }
+            ]
+          },
+          "hasFinalDecision": {
+            "type": "boolean"
+          },
+          "votingData": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VotingData"
+              }
+            ]
+          },
+          "totalVotesCast": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carVoteClosing": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarVoteClosing"
+              }
+            ]
+          },
+          "carAssignment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarAssignment"
+              }
+            ]
+          },
+          "avg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votePassed": {
+            "type": "boolean"
+          },
+          "votingStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestStatusId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestStatus": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          }
+        }
+      },
+      "MyListItem": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ArpUser": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "managerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentId": {
+            "type": "string",
+            "nullable": true
+          },
+          "depCode2": {
+            "type": "string",
+            "nullable": true
+          },
+          "depManager2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groupId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "departmentName": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "idNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "phone": {
+            "type": "string",
+            "nullable": true
+          },
+          "isManager": {
+            "type": "boolean"
+          },
+          "collapsed": {
+            "type": "boolean"
+          },
+          "manager": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "department": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpDepartment"
+              }
+            ]
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "subordinates": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ArpUser"
+            }
+          },
+          "carDeliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarDeliveryDetail"
+            }
+          },
+          "carRequests": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarRequest"
+            }
+          },
+          "carBoardMember": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BoardMember"
+              }
+            ]
+          },
+          "electrBoardMember": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BoardMember2"
+              }
+            ]
+          },
+          "token": {
+            "type": "string",
+            "nullable": true
+          },
+          "electronicsRequests": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Request"
+            }
+          },
+          "itemDeliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/DeliveryDetail"
+            }
+          }
+        }
+      },
+      "ArpDepartment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true
+          },
+          "managerId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "CarDeliveryDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "deliveredTo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deliveryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "approvalId": {
+            "type": "string"
+          },
+          "docNo": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "car": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Car"
+              }
+            ]
+          },
+          "user": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "carReturnRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarRequest"
+              }
+            ]
+          },
+          "carReplaceRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarRequest"
+              }
+            ]
+          }
+        }
+      },
+      "Car": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "carTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "model": {
+            "type": "string"
+          },
+          "manufactureYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "serialNo": {
+            "type": "string"
+          },
+          "numberPlate": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nPlate": {
+            "type": "string"
+          },
+          "category": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarCategory"
+              }
+            ]
+          },
+          "fullName": {
+            "type": "string"
+          },
+          "carType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarType"
+              }
+            ]
+          },
+          "deliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarDeliveryDetail"
+            }
+          },
+          "lastDelivery": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarDeliveryDetail"
+              }
+            ]
+          },
+          "attachments": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CarAttachment"
+            }
+          },
+          "insuranceDetail": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarInsuranceDetail"
+              }
+            ]
+          },
+          "status": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "deliveryStatus": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "region": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Region"
+              }
+            ]
+          }
+        }
+      },
+      "CarCategory": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "manufacturer": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Manufacturer"
+              }
+            ]
+          }
+        }
+      },
+      "Manufacturer": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarCategory"
+            }
+          }
+        }
+      },
+      "CarType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "CarAttachment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attachmentType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          }
+        }
+      },
+      "CarInsuranceDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "companyId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "companyName": {
+            "type": "string"
+          },
+          "insuranceType": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "policyNo": {
+            "type": "string"
+          },
+          "fromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "Region": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "BoardMember": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "arpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boardMemberType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BoardMemberType"
+              }
+            ]
+          }
+        }
+      },
+      "BoardMemberType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "BoardMember2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "arpId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "boardMemberType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/BoardMemberType2"
+              }
+            ]
+          }
+        }
+      },
+      "BoardMemberType2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Request": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestDetail": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "itemTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "beneficiary": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "accept": {
+            "type": "boolean"
+          },
+          "item": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Item"
+              }
+            ]
+          },
+          "actions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/RequestAction"
+            }
+          },
+          "currentActionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "currentAction": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/RequestAction"
+              }
+            ]
+          },
+          "assignment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Assignment"
+              }
+            ]
+          },
+          "votings": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/VotingDetail"
+            }
+          },
+          "currentUserVoting": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VotingDetail"
+              }
+            ]
+          },
+          "totalVotesObtained": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votingData": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/VotingData"
+              }
+            ]
+          },
+          "totalVotesCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "avg": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votePassed": {
+            "type": "boolean"
+          },
+          "previousDeliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/DeliveryDetail"
+            }
+          },
+          "deliveryDetail": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryDetail"
+              }
+            ]
+          },
+          "returnRequestApproval": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ReturnRequestApproval"
+              }
+            ]
+          },
+          "refused": {
+            "type": "boolean"
+          }
+        }
+      },
+      "Item": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "identificationId": {
+            "type": "string"
+          },
+          "modelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accessories": {
+            "type": "string"
+          },
+          "addDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ItemType"
+              }
+            ]
+          },
+          "model": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Model"
+              }
+            ]
+          },
+          "fullDetails": {
+            "type": "string"
+          },
+          "deliveries": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/DeliveryDetail"
+            }
+          },
+          "lastDelivery": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryDetail"
+              }
+            ]
+          },
+          "deliveryStatus": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ItemType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "Model": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "processor": {
+            "type": "string"
+          },
+          "hardDisk": {
+            "type": "string"
+          },
+          "ram": {
+            "type": "string"
+          },
+          "itemSize": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "manufacturer": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Manufacturer2"
+              }
+            ]
+          },
+          "itemType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ItemType"
+              }
+            ]
+          }
+        }
+      },
+      "Manufacturer2": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "DeliveryDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "deliveredTo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "deliveryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "docNo": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "item": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Item"
+              }
+            ]
+          },
+          "user": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          },
+          "returnRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Request"
+              }
+            ]
+          },
+          "replaceRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Request"
+              }
+            ]
+          }
+        }
+      },
+      "RequestAction": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "requestSn": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "actionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "actionType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "attachment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AttachmentDetail"
+              }
+            ]
+          }
+        }
+      },
+      "AttachmentDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "originId": {
+            "type": "string"
+          },
+          "originTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fileName": {
+            "type": "string"
+          },
+          "folder": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "entryDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Assignment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "assignmentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "item": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Item"
+              }
+            ]
+          }
+        }
+      },
+      "VotingDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "actionId": {
+            "type": "string"
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "member": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          }
+        }
+      },
+      "VotingData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "votingMembers": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votesTotal": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "ReturnRequestApproval": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvalDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "request": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Request"
+              }
+            ]
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          }
+        }
+      },
+      "CarVotingDetail": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "votingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "managerResponseId": {
+            "type": "string"
+          },
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "member": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/ArpUser"
+              }
+            ]
+          }
+        }
+      },
+      "CarVotingFinalDecision": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "managerResponseId": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "decisionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          },
+          "managerResponse": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarManagerResponse"
+              }
+            ]
+          },
+          "attachment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AttachmentDetail"
+              }
+            ]
+          }
+        }
+      },
+      "CarVoteClosing": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "closingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "managerResponseId": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "reasonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "CarAssignment": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignmentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "car": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/Car"
+              }
+            ]
+          }
+        }
+      },
+      "RequestType": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "Progress": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "statusDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "isCurrent": {
+            "type": "boolean"
+          },
+          "data": {}
+        }
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "additionalProperties": {
+          "nullable": true
+        },
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "CarRequestDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestDetail": {
+            "type": "string",
+            "nullable": true
+          },
+          "notes": {
+            "type": "string",
+            "nullable": true
+          },
+          "deliveryId": {
+            "type": "string"
+          }
+        }
+      },
+      "CarManagerResponseDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "managerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "responseDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "CarAssignmentDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "carId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignmentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          }
+        }
+      },
+      "CarVotingFinalDecisionDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "managerResponseId": {
+            "type": "string"
+          },
+          "decisionDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "attachment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AttachmentDetail"
+              }
+            ]
+          }
+        }
+      },
+      "CarVotingDetailDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "votingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "managerResponseId": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "CarReturnRequestApproval": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "approvalDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "carRequest": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/CarRequest"
+              }
+            ]
+          },
+          "responseType": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/MyListItem"
+              }
+            ]
+          }
+        }
+      },
+      "CarReturnRequestApprovalDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "approvalDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "CarDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "carTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "categoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "manufactureYear": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "regionId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locationId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "model": {
+            "type": "string"
+          },
+          "serialNo": {
+            "type": "string"
+          },
+          "numberPlate": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "ItemDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "modelId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "identificationId": {
+            "type": "string"
+          },
+          "accessories": {
+            "type": "string"
+          },
+          "addDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "RequestDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "requestDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestDetail": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          }
+        }
+      },
+      "RequestActionDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "requestSn": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "typeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "attachment": {
+            "nullable": true,
+            "oneOf": [
+              {
+                "$ref": "#/components/schemas/AttachmentDetail"
+              }
+            ]
+          },
+          "id": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "actionDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "AssignmentDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "assignmentDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "requestId": {
+            "type": "string"
+          }
+        }
+      },
+      "VotingDetailDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "memberId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "voteCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "votingDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          },
+          "actionId": {
+            "type": "string"
+          }
+        }
+      },
+      "ModelDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "manufacturerId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          },
+          "processor": {
+            "type": "string"
+          },
+          "hardDisk": {
+            "type": "string"
+          },
+          "ram": {
+            "type": "string"
+          },
+          "itemSize": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "ReturnRequestApprovalDto": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "serialNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "responseTypeId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "string"
+          },
+          "approvalDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "requestId": {
+            "type": "string"
+          },
+          "deliveryId": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      },
+      "LoginData": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "userName": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "machineName": {
+            "type": "string",
+            "nullable": true
+          },
+          "sessionId": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
